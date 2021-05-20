@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>{{diary.title}}</h1>
+        <br>
+        <h4>{{diary.pub_date}}</h4>
+        <h3>{{diary.body}}</h3>        
+    </div>
+    <div>
+        <a href = "{% url 'edit' diary.id %}">edit</a>
+        <a href = "{% url 'delete' diary.id %}">delete</a>
+        <br>
+        <a href = "{% url 'index' %}">index</a>
+    
+    </div>
+    
+</body>
+</html>

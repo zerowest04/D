@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <div style="text-align: center">
+        <a href = "{% url 'new' %}">write new diary</a>
+        <br>
+        {% for d in diary %}
+            <div>
+                <ul>
+                    <a href = "{% url 'detail' d.id%}">{{d.pub_date}} - {{d.title}}</a> 
+                </ul>
+            </div>
+        {% endfor %}
+        <br>
+        <a href = "{% url 'home' %}">go back to home</a>
+    </div>
+    
+</body>
+</html>
